@@ -1,0 +1,21 @@
+{
+	"Add ctx param": {
+		"scope": "typescript",
+		"prefix": "ct",
+		"body": [
+      "ctx: Ctx",
+		],
+		"description": "Add ctx parameter with Type"
+	},
+	"Save and restore ctx state": {
+		"scope": "typescript",
+		"prefix": "cts",
+		"body": [
+      "ctx.save()",
+			"",
+			"$1",
+			"",
+			"ctx.restore()"
+		],
+	},
+}

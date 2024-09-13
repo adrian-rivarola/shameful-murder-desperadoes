@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost", "ES2017"],
+    "baseUrl": "./",
+    "strict": true,
+    "noEmit": false,
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "module": "NodeNext"
+  },
+  "include": ["src/**/*", "typedefs/*"]
+}

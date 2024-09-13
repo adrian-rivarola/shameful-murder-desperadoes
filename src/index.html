@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="initial-scale=1.0,width=device-width,user-scalable=no,viewport-fit=cover,maximum-scale=1.0, user-scalable=no" />
+  <title>Shameful Murder Desperadoes</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      min-height: fill-available;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+
+    canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #33333370;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay p {
+      opacity: 1;
+      font-size: 8vw;
+      text-align: center;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        scale: 0;
+        scale: 100% 1;
+      }
+
+      to {
+        opacity: 1;
+        scale: 100% 1;
+      }
+    }
+
+    .asd p {
+      animation-duration: 3s;
+      animation-name: fade;
+    }
+
+    .t {
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay hide" id="pause-overlay">
+    <p>Game Paused</p>
+    <p>Press P to continue</p>
+  </div>
+  <div class="overlay hide" id="game-over">
+    <p>You died!</p>
+    <p>You won!</p>
+    <button class="btn">Restart</button>
+    <button class="btn">New Game +</button>
+  </div>
+  <div class="overlay asd">
+    <p class="t">Shameful Murder Desperadoes</p>
+    <button class="btn" id="start-game">Start game</button>
+  </div>
+  <canvas id="game"></canvas>
+</body>
+
+</html>
